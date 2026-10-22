@@ -1,0 +1,452 @@
+/* styles.css - Enhanced TripTrove Styles with Images & Videos */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0056b3;
+    padding: 15px 40px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    cursor: default;
+    user-select: none;
+}
+
+.navbar .logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+}
+
+.navbar .logo span {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00;
+}
+
+.hero {
+    background: url('images/about-hero.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 90vh;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 86, 179, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: #0056b3;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #ffb300;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.feature-box img {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+}
+
+.feature-box h2 {
+    color: #0056b3;
+    margin-bottom: 15px;
+}
+
+
+/* about css */
+
+.about-hero {
+    background: url('images/about-hero.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.about-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 86, 179, 0.5);
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    background: white;
+    padding: 30px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    text-align: center;
+}
+
+.team {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* category css */
+
+.category-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.category-box {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.category-box h2 {
+    margin-bottom: 15px;
+}
+
+.category-box a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.category-box a:hover {
+    background-color: #0056b3;
+}
+
+.package {
+    margin: 20px auto;
+    width: 80%;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.package img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.package h3 {
+    margin-top: 10px;
+}
+
+/* packages css */
+
+.packages-hero {
+    background: url('images/packages-hero.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.packages-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 86, 179, 0.5);
+}
+
+.packages-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.package-list {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+}
+
+.package {
+    background: white;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.package img {
+    height: 50%;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.package:hover {
+    transform: scale(1.05);
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+/* login css */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+#booking{
+    width: 900px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+p a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+.category-container a{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.category-box a:hover {
+    background-color: #0056b3;
+}
+
+
+.itinerary-details {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.itinerary-details a:hover {
+    background-color: #0056b3;
+}
+
+/* Booking */
+
+
+
+
+/* footer css */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 30px;
+}
